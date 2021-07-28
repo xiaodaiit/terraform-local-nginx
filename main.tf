@@ -12,6 +12,5 @@ resource "docker_container" "nginx" {
   name  = "tutorial-${count.index}"
   ports {
     internal = 80
-    #external = "808${count.index}"
   }
 }
