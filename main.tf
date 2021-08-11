@@ -9,8 +9,9 @@ resource "docker_image" "nginx" {
 resource "docker_container" "nginx" {
   count = var.number
   image = docker_image.nginx.latest
-  name  = "tutorial-${count.index}"
+  name  = "${var.container_name_prefix}-${count.index}"
   ports {
     internal = 80
   }
 }
+

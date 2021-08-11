@@ -3,3 +3,7 @@ variable "number" {
   type = number
 }
 
+variable "container_name_prefix" {
+  default = "tf-nginx-service" 
+  type = string
+}
